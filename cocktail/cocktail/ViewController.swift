@@ -12,19 +12,15 @@
         
         @IBOutlet weak var tableView: UITableView!
         @IBOutlet weak var searchBar: UISearchBar!
-        
-        
+
         private var cocktails: Cocktails?
-        
         
         override func viewDidLoad() {
             super.viewDidLoad()
-            // Do any additional setup after loading the view.
             tableView.dataSource = self
             tableView.tableFooterView = UIView()
         }
         
-      
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return cocktails?.drinks.count ?? 0
         }
@@ -32,8 +28,7 @@
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cocktailCell", for: indexPath)
             let cocktail = cocktails?.drinks[indexPath.row]
-            cell.textLabel?.text = cocktail?.strDrink ?? "no name"
-            
+            cell.textLabel?.text = cocktail?.strDrink ?? "no name"            
             return cell
         }
         func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
@@ -42,7 +37,6 @@
                 if(text == ""){
                     self.cocktails = nil
                     self.tableView.reloadData()
-                    
                 }else{
                     APIManager.shared.getCocktailsByIngredient(ingredient: text, completion: { (cocktails) -> (Void) in
                         if let cocktails = cocktails {
@@ -53,6 +47,15 @@
                             print("could not fetch cocktails")
                         }
                     })
+                }
+            }
+        }
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            guard let cell = sender as? UITableViewCell else{ return }
+
+            if let index = self.tableView.indexPath(for: cell)?.row{
+                if let viewController = segue.destination as? DetailsViewController{
+                    viewController.cocktail = self.cocktails?.drinks[index]
                 }
             }
         }

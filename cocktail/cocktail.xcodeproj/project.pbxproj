@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C4CC0602617268A00AFC3D3 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4CC05F2617268A00AFC3D3 /* DetailsViewController.swift */; };
 		0CF002F22615A5F000CC8303 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF002F12615A5F000CC8303 /* AppDelegate.swift */; };
 		0CF002F42615A5F000CC8303 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF002F32615A5F000CC8303 /* SceneDelegate.swift */; };
 		0CF002F62615A5F000CC8303 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF002F52615A5F000CC8303 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C4CC05F2617268A00AFC3D3 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		0CF002EE2615A5F000CC8303 /* cocktail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cocktail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CF002F12615A5F000CC8303 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CF002F32615A5F000CC8303 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				0CF002FC2615A5F000CC8303 /* LaunchScreen.storyboard */,
 				0CF002FF2615A5F000CC8303 /* Info.plist */,
 				0CF003092615C98100CC8303 /* APIManager.swift */,
+				0C4CC05F2617268A00AFC3D3 /* DetailsViewController.swift */,
 			);
 			path = cocktail;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 				0CF0030A2615C98100CC8303 /* APIManager.swift in Sources */,
 				0CF002F42615A5F000CC8303 /* SceneDelegate.swift in Sources */,
 				0CF003082615C80200CC8303 /* cocktail.swift in Sources */,
+				0C4CC0602617268A00AFC3D3 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

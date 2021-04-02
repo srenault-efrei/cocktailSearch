@@ -12,7 +12,7 @@ class APIManager {
     
     static var shared = APIManager()
     
-    private let baseURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i="
+    private let baseURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="
     private let session = URLSession(configuration: .default)
     
     
