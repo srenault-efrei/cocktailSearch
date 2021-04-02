@@ -38,7 +38,7 @@
                     self.cocktails = nil
                     self.tableView.reloadData()
                 }else{
-                    APIManager.shared.getCocktailsByIngredient(ingredient: text, completion: { (cocktails) -> (Void) in
+                    APIManager.shared.getCocktailsByName(name: text, completion: { (cocktails) -> (Void) in
                         if let cocktails = cocktails {
                             self.cocktails = cocktails
                             self.tableView.reloadData()

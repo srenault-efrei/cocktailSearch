@@ -41,8 +41,8 @@ class APIManager {
   
               task.resume()
     }
-    func getCocktailsByIngredient(ingredient: String, completion: @escaping (Cocktails?) -> (Void)) {
-           self.call(ingredient, completion: completion)
+    func getCocktailsByName(name: String, completion: @escaping (Cocktails?) -> (Void)) {
+           self.call(name, completion: completion)
        
        }
 }
